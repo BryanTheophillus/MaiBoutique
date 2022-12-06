@@ -12,6 +12,17 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    public function role(){
+        return $this->belongsTo(Role::class);
+    }
+
+    public function cart(){
+        return $this->belongsTo(Cart::class);
+    }
+
+    public function transaction_headers(){
+        return $this->hasMany(TransactionDetail::class);
+    }
     /**
      * The attributes that are mass assignable.
      *
