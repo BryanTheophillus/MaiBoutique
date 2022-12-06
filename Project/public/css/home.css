@@ -1,0 +1,45 @@
+#brand {
+    color: #009bd9;
+    font-weight: bold;
+}
+
+#nav{
+    background-color:white;
+}
+
+#homeimg{
+    width: 100%;
+    height:50%;
+    filter:brightness(50%);
+}
+
+.main{
+    width:100%;
+    height: 350pt;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("../storage/asset/home.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#main-text{
+    color:white;
+}
+
+#secondary-text{
+    font-weight: normal;
+    color:white;
+}
+
+#SignUpButton{
+    background-color: #009bd9;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+u{
+    text-decoration-color: #009bd9;
+}
