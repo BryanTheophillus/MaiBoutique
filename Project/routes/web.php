@@ -21,3 +21,5 @@ Route::post('/SignIn', ['App\Http\Controllers\AuthController','authenticate']);
 
 Route::get('/SignUp', ['App\Http\Controllers\UserController', 'SignUp']);
 Route::post('/SignUp', ['App\Http\Controllers\UserController','Register']);
+
+Route::get('/logout',['App\Http\Controllers\AuthController','logout']);

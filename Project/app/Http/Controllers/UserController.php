@@ -20,8 +20,8 @@ class UserController extends Controller
 
     public function Register(Request $request){
         $request->validate([
-            'username'=>'required|string|min:5|max:10|unique:user',
-            'email' => 'required|email|unique:user',
+            'username'=>'required|string|min:5|max:10|unique:users',
+            'email' => 'required|email|unique:users',
             'password' => 'required|string|min:5|max:20',
             'phonenumber' =>'required|digits_between:10,13',
             'address' =>'required|string|min:5|max:255'

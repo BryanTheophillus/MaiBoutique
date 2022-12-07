@@ -20,16 +20,16 @@
                                 </ul>
                             </div>
                         @endif
-                        <label for="Email" id="email">Email</label>
+                        <label for="email" id="email">Email</label>
                         <div class="form-group mb-3">
-                            <input type="text" class="form-control" name="Email" id="email" placeholder="Email" value="{{Cookie::get('cookieEmail') != null ? Cookie::get('cookieEmail') : '' }}">
+                            <input type="text" class="form-control" name="email" id="email" placeholder="Email" value="{{Cookie::get('cookieEmail') != null ? Cookie::get('cookieEmail') : '' }}">
                         </div>
-                        <label for="Password" id="password">Password</label>
+                        <label for="password" id="password">Password</label>
                         <div class="form-group mb-3">
-                            <input type="password" class="form-control" name="Password" id="password" placeholder="5-20 Characters" value="{{Cookie::get('cookiePassword') != null ? Cookie::get('cookiePassword') : '' }}">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="5-20 Characters" value="{{Cookie::get('cookiePassword') != null ? Cookie::get('cookiePassword') : '' }}">
                         </div>
                         <div>
-                            <input type="checkbox" name="Remember" class="remember" {{Cookie::get('cookieEmail') != null ? Cookie::get('cookieEmail') : '' }}>
+                            <input type="checkbox" name="remember" class="remember" {{Cookie::get('cookieEmail') != null ? Cookie::get('cookieEmail') : '' }}>
                             <label for="remember">Remember me</label>
                         </div>
                         <div class="form-group d-flex justify-content-center ">
