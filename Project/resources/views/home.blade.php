@@ -1,23 +1,14 @@
-@extends('template.template')
+@extends('template.navbar')
 @section('title','Home')
 
 @section('content')
 <link rel="stylesheet" href="{{url('/css/home.css')}}">
 
 <body>
-    <header>
-        <nav class="navbar navbar-light px-5" id="nav">
-            <div class="container-fluid">
-            <a class="navbar-brand" href="/" id="brand"><u>MAIBOUTIQUE</u></a>
-            <form class="d-flex">
-                <a href = "/SignIn" class="signin pt-3" >Sign in</a>
-            </form>
-            </div>
-        </nav>
-    </header>
     <div class="main d-flex flex-column justify-content-center align-items-center">
+        <img src="{{url("../storage/asset/home.jpg")}}" id="image">
         <div class="container">
-            <div class="row text-center">
+            <div class="centered row text-center">
                 <div class="col-lg-12">
                     <img>
                     <h1 id="main-text">Welcome to <u>MaiBoutique</u></h1>
@@ -29,3 +20,4 @@
     </div>
 
 </body>
+@endsection

@@ -14,13 +14,14 @@
 }
 
 .main{
-    width:100%;
+    /* width:100%;
     height: 350pt;
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("../storage/asset/home.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-
+    background-size: cover; */
+    position: relative;
+    text-align: center;
 }
 
 #main-text{
@@ -42,4 +43,22 @@
 
 u{
     text-decoration-color: #009bd9;
+}
+
+#SignInLink{
+    text-decoration: none;
+}
+
+.centered{
+    position:absolute;
+    top:30%;
+    left:15%;
+    right:15%;
+    transform: translate(-50.-50);
+}
+
+#image{
+    width: 100%;
+    height: 350pt;
+    filter:brightness(50%);
 }
