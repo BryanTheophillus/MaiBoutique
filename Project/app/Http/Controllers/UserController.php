@@ -24,8 +24,7 @@ class UserController extends Controller
             'email' => 'required|email|unique:user',
             'password' => 'required|string|min:5|max:20',
             'phonenumber' =>'required|digits_between:10,13',
-            'address' =>'required|string|min:5|max:255',
-            'agreement' =>'accepted'
+            'address' =>'required|string|min:5|max:255'
         ]);
 
         $user = new User();

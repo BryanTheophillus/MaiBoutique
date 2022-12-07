@@ -11,16 +11,25 @@
                     <h3 class="card-title text-center mt-5">Sign In</h3>
                     <form action="/SignIn" method="POST">
                         @csrf
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{$error}}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <label for="Email" id="email">Email</label>
                         <div class="form-group mb-3">
-                            <input type="text" class="form-control" name="Email" id="email" placeholder="">
+                            <input type="text" class="form-control" name="Email" id="email" placeholder="Email" value="{{Cookie::get('cookieEmail') != null ? Cookie::get('cookieEmail') : '' }}">
                         </div>
                         <label for="Password" id="password">Password</label>
                         <div class="form-group mb-3">
-                            <input type="password" class="form-control" name="Password" id="password" placeholder="5-20 Characters">
+                            <input type="password" class="form-control" name="Password" id="password" placeholder="5-20 Characters" value="{{Cookie::get('cookiePassword') != null ? Cookie::get('cookiePassword') : '' }}">
                         </div>
                         <div>
-                            <input type="checkbox" name="Remember" class="remember">
+                            <input type="checkbox" name="Remember" class="remember" {{Cookie::get('cookieEmail') != null ? Cookie::get('cookieEmail') : '' }}>
                             <label for="remember">Remember me</label>
                         </div>
                         <div class="form-group d-flex justify-content-center ">
