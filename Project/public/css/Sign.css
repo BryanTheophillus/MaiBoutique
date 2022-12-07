@@ -48,3 +48,40 @@ input.remember{
 #bot{
     margin-top: 10%;
 }
+
+input[type=file]{
+    margin-left: 5%;
+    width:90%;
+}
+
+input[type=number]{
+    margin-left: 5%;
+    width:90%;
+}
+
+#cardAdd{
+    background-color: rgb(254, 204, 213);
+    border-color: black;
+    border-width: 3px;
+    border-radius: 1%;
+    min-height: 35rem;
+    margin-bottom: 5%;
+    width:50rem;
+}
+
+.contain{
+    margin-right: 15%;
+}
+
+#links{
+    text-decoration: none;
+}
+
+#links:hover{
+    color: white;
+}
+
+.addBtn{
+    margin-left: 5%;
+    color:white;
+}

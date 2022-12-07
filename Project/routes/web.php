@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,5 +25,15 @@ Route::get('/SignUp', [UserController::class, 'SignUp']);
 Route::post('/SignUp', [UserController::class,'Register']);
 
 Route::get('/homepage',[AuthController::class,'homepage']);
+Route::get('/homepage',[ProductController::class,'homeProduct']);
 
-Route::get('/SignOut',[AuthController::class,'logout']);
+Route::get('/Search',[ProductController::class, 'SearchProduct']);
+Route::get('/SearchProd',[ProductController::class, 'SearchProduct']);
+Route::group(['middleware' => ['auth']], function(){
+    Route::group(['middleware' => ['security']], function(){
+        Route::post('/AddProduct',[ProductController::class,'AddProduct']);
+        Route::get('/AddProduct',[ProductController::class,'AddProduct']);
+    });
+});
+
+Route::get('/SignOut',[AuthController::class,'logout'])->name('logout');

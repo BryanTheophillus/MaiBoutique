@@ -1,11 +1,17 @@
 @extends('template.loginNav')
-@section('title','Homepage')
+@section('title','Search')
 
 <link rel="stylesheet" href="{{url('/css/home.css')}}">
 @section('content')
+
 <div class="content-1">
-    <h3 class="CTitle d-flex justify-content-center">Find Your Best Clothes Here!</h3>
+    <h3 class="CTitle d-flex justify-content-center">Search Your Favorite Clothes Here!</h3>
 </div>
+<form action="/SearchProd" method="GET" class="d-flex">
+    <input class="SearchBox form-control" type="search" name="search" placeholder="Search" aria-label="Search">
+    <button class="searchBtn btn btn-primary" type="submit">Search</button>
+</form>
+
 <div class="d-flex flex-wrap justify-content-center">
     @if ($products->isEmpty())
         <p id="msg" >Not Found</p>
