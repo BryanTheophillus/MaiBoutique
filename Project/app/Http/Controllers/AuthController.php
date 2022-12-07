@@ -26,7 +26,7 @@ class AuthController extends Controller
 
             $request->session()->regenerate();
 
-            return redirect()->intended('/');
+            return redirect()->intended('/homepage');
         }
 
         return back()->with('Error');
@@ -35,5 +35,9 @@ class AuthController extends Controller
     public function logout() {
         Auth::logout();
         return redirect("/");
+    }
+
+    public function homepage(){
+        return view("/homepage");
     }
 }

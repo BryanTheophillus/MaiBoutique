@@ -28,7 +28,8 @@ class UserController extends Controller
         ]);
 
         $user = new User();
-        $user->role_id ='2';
+        $user
+        ->role_id ='2';
         $user->username = $request->username;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
