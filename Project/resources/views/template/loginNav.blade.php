@@ -20,7 +20,7 @@
                             <a class="nav-link" href="/Search">Search</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Profile</a>
+                            <a class="nav-link" href="/Profile">Profile</a>
                         </li>
                     </ul>
                     <form class="d-flex">
@@ -52,7 +52,7 @@
                             <a class="nav-link" href="#">History</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Profile</a>
+                            <a class="nav-link" href="/Profile">Profile</a>
                         </li>
                     </ul>
                     <form class="d-flex">

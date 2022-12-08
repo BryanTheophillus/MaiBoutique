@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+
 class UserController extends Controller
 {
     public function Home(){
@@ -28,8 +30,7 @@ class UserController extends Controller
         ]);
 
         $user = new User();
-        $user
-        ->role_id ='2';
+        $user->role_id ='2';
         $user->username = $request->username;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
@@ -37,6 +38,12 @@ class UserController extends Controller
         $user->address = $request->address;
         $user->save();
         return redirect('/');
+    }
+
+    public function viewProfile(){
+        $user = Auth::user();
+
+        return view('profile',compact('user'));
     }
 
 }

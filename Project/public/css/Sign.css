@@ -111,3 +111,7 @@ input[type=number]{
     margin: 2%;
 }
 
+.profileCard{
+    width:50%;
+    justify-content: center;
+}

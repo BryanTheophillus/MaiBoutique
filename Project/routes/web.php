@@ -23,19 +23,22 @@ Route::post('/SignIn', [AuthController::class,'authenticate']);
 Route::get('/SignUp', [UserController::class, 'SignUp']);
 Route::post('/SignUp', [UserController::class,'Register']);
 
-Route::get('/homepage',[AuthController::class,'homepage']);
-Route::get('/homepage',[ProductController::class,'homeProduct']);
 
 Route::get('/Search',[ProductController::class, 'SearchProduct']);
 Route::get('/SearchProd',[ProductController::class, 'SearchProduct']);
 
 Route::get('/Detail/{id}',[ProductController::class, 'detail']);
+Route::get('/Profile',[UserController::class, 'viewProfile']);
 
 Route::group(['middleware' => ['auth']], function(){
+    Route::group(['middleware' => ['member']], function(){
+    });
     Route::group(['middleware' => ['security']], function(){
         Route::post('/AddProduct',[ProductController::class,'AddProduct']);
         Route::get('/Add',[ProductController::class,'Add']);
         Route::get('/Delete/{id}',[ProductController::class,'delete']);
+        Route::get('/homepage',[AuthController::class,'homepage']);
+        Route::get('/homepage',[ProductController::class,'homeProduct']);
     });
 });
 
