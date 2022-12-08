@@ -24,7 +24,7 @@
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <button class="btn btn-outline-primary mx-2"><a href="/AddProduct"id="links">Add Item</a></button>
+                        <button class="btn btn-outline-primary mx-2"><a href="/Add"id="links">Add Item</a></button>
                         <button class="btn btn-outline-primary"><a href ="/SignOut" id="links">Sign Out</a></button>
                     </form>
                 </div>

@@ -85,3 +85,29 @@ input[type=number]{
     margin-left: 5%;
     color:white;
 }
+
+.ProdDetImg{
+    width: 70%;
+    height:60%;
+    margin-top:3%;
+    margin-left: 10%;
+    display: block;
+    margin-right: auto;
+    padding-top: 5%;
+}
+
+.Prodtitle{
+    margin-top: 10%;
+}
+
+.ProdDetail{
+    border-bottom: 1px solid black;
+    margin-bottom: 3%;
+    margin-right: 5%;
+}
+
+#quantity{
+    width:40%;
+    margin: 2%;
+}
+

@@ -9,7 +9,7 @@
             <div class="contain col-md-5">
                 <div class="card mt-3" id="cardAdd">
                     <h3 class="card-title text-center mt-5">Add Product</h3>
-                    <form action="/AddProduct" method="POST">
+                    <form action="/AddProduct" method="POST" enctype="multipart/form-data">
                         @csrf
 
                         @if ($errors->any())
@@ -27,22 +27,22 @@
 
                         <div class="form-group mb-3">
                             <label class="form-label" for="name">Clothes Name</label>
-                            <input class="form-control" type="text" name="name" id="name">
+                            <input class="form-control" type="text" name="name" id="name" placeholder="5 - 20 letter">
                         </div>
 
                         <div class="form-group mb-3">
-                            <label class="form-label" for="desc">Clothes Desc</label>
-                            <input class="form-control" type="text" name="desc" id="desc">
+                            <label class="form-label" for="description">Clothes Desc</label>
+                            <input class="form-control" type="text" name="description" id="description" placeholder="min 5 characters">
                         </div>
 
                         <div class="form-group mb-3">
                             <label class="form-label" for="price">Clothes Price</label>
-                            <input class="form-control" type="number" name="price" id="price">
+                            <input class="form-control" type="number" name="price" id="price" placeholder="min 1000">
                         </div>
 
                         <div class="form-group mb-3">
                             <label class="form-label" for="stock">Clothes Stock</label>
-                            <input class="form-control" type="number" name="stock" id="stock">
+                            <input class="form-control" type="number" name="stock" id="stock" placeholder="min 1">
                         </div>
 
                         <div class="form-group d-flex justify-content-start m-auto">

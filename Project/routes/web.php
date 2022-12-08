@@ -4,7 +4,6 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,10 +28,14 @@ Route::get('/homepage',[ProductController::class,'homeProduct']);
 
 Route::get('/Search',[ProductController::class, 'SearchProduct']);
 Route::get('/SearchProd',[ProductController::class, 'SearchProduct']);
+
+Route::get('/Detail/{id}',[ProductController::class, 'detail']);
+
 Route::group(['middleware' => ['auth']], function(){
     Route::group(['middleware' => ['security']], function(){
         Route::post('/AddProduct',[ProductController::class,'AddProduct']);
-        Route::get('/AddProduct',[ProductController::class,'AddProduct']);
+        Route::get('/Add',[ProductController::class,'Add']);
+        Route::get('/Delete/{id}',[ProductController::class,'delete']);
     });
 });
 

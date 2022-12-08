@@ -24,7 +24,7 @@
                     <h5 class="card-title">{{$product->name}}</h5>
               </div>
               <p class="card-text">Rp.{{$product->price}}</p>
-              <td><a href="" class="btn bg-Primary">More Detail</a></td>
+              <td><a href="/Detail/{{$product->id}}" class="btn bg-Primary">More Detail</a></td>
           </div>
       </div>
     @endforeach
