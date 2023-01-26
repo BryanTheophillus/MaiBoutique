@@ -1,0 +1,107 @@
+#brand {
+    color: #009bd9;
+    font-weight: bold;
+}
+
+#nav {
+    background-color: white;
+}
+
+#homeimg {
+    width: 100%;
+    height: 50%;
+    filter: brightness(50%);
+}
+
+.main {
+    position: relative;
+    text-align: center;
+}
+
+#main-text {
+    color: white;
+}
+
+#secondary-text {
+    font-weight: normal;
+    color: white;
+}
+
+#SignUpButton {
+    background-color: #009bd9;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+u {
+    text-decoration-color: #009bd9;
+}
+
+#SignInLink {
+    text-decoration: none;
+}
+
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    right: 15%;
+    transform: translate(-50.-50);
+}
+
+#image {
+    width: 100%;
+    height: 350pt;
+    filter: brightness(50%);
+}
+
+.card img {
+    height: 15rem;
+}
+
+.content-1 {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 20%;
+    margin-left: 20%;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.CTitle {
+    color: black;
+}
+
+.card {
+    width: 20%;
+    border-radius: 10%;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+
+#links {
+    text-decoration: none;
+}
+
+.searchBox {
+    margin-left: 5%;
+    margin-right: 1%;
+}
+
+.searchBtn {
+    margin-right: 5%;
+}
+
+.msg {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#links:hover {
+    color: white;
+}
